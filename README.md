@@ -5,8 +5,9 @@ Sets up a docker container with jenkins master with the swarm plugin with the as
 Usage
 ------
 ```
+docker run -p 80:8080 -p 49759:49759 -p 49999:49999 -t -i mwhahaha/jenkins-master
 ```
-The jenkins instance is available via port #####.
+The jenkins instance is available via port 80.  Note if you want to use the slaves, you'll want to specify the JNLP port for the slaves.  The 49999 port mapping can be used for the JNLP port. 
 
 Build
 -----

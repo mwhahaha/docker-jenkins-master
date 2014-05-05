@@ -9,5 +9,5 @@ ADD docker.pp /puppet/docker.pp
 ADD supervisord.conf /etc/supervisord.conf
 RUN cd /puppet && librarian-puppet install
 RUN puppet apply --modulepath=/puppet/modules/ /puppet/docker.pp
-EXPOSE 8080
+EXPOSE 8080 49759
 CMD ["/usr/bin/supervisord"]
